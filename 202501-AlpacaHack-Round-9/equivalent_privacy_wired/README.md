@@ -8,7 +8,7 @@ I heard that WEP is vulnerable, so I modified it a bit.
 
 ## Attachments
 
-[attachments](./distfiles/)
+[attachments](./rawdistfiles/)
 
 ## Solution
 

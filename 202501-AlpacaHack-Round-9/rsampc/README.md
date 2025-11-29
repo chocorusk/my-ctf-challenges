@@ -1,4 +1,4 @@
-# Equivalent Privacy Wired
+# RSAMPC
 
 ## Description
 
