@@ -1,0 +1,8 @@
+services:
+  secure-bike:
+    build:
+      context: .
+    ports:
+      - "12346:12346"
+    restart: unless-stopped
+    privileged: true

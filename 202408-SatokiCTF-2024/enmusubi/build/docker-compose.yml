@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  enmusubi:
+    build: .
+    ports:
+      - 5555:5555
+    restart: always

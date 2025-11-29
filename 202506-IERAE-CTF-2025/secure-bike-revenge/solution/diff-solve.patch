@@ -1,0 +1,72 @@
+diff -u -r Reference_Implementation/kem.c Reference_Implementation_patched/kem.c
+--- Reference_Implementation/kem.c	2024-10-10 16:22:14.000000000 +0900
++++ Reference_Implementation_patched/kem.c	2025-06-04 16:03:14.331615954 +0900
+@@ -353,3 +353,55 @@
+     return res;
+ }
+ 
++extern "C" int crypto_kem_dec_from_e(OUT unsigned char *ss,
++        IN const unsigned char *ct,
++        IN const unsigned char *e)
++{
++    DMSG("  Enter crypto_kem_dec.\n");
++    status_t res = SUCCESS;
++
++    // convert to this implementation types
++    const ct_t* l_ct = (ct_t*)ct;
++    ss_t* l_ss = (ss_t*)ss;
++
++    int failed = 0;
++
++    // for NIST DRBG_CTR
++    double_seed_t seeds = {0};
++  
++    uint8_t e_recomputed[N_SIZE] = {0};
++
++    uint8_t Le0e1[ELL_SIZE + 2*R_SIZE] = {0};
++    uint8_t m_prime[ELL_SIZE] = {0};
++
++    uint32_t h0_compact[DV] = {0};
++    uint32_t h1_compact[DV] = {0};
++
++    uint8_t e_prime[N_SIZE] = {0};
++    uint8_t e_twoprime[R_BITS*2] = {0};
++   
++    uint8_t e_tmp1[R_BITS*2] = {0};
++    uint8_t e_tmp2[N_SIZE] = {0};
++
++    uint8_t e0rand[R_SIZE] = {0};
++    uint8_t e1rand[R_SIZE] = {0};
++
++    int rc;
++
++    convertBinaryToByte(e_prime, e, 2*R_BITS);
++
++    // Step 3. compute L(e0 || e1)
++    functionL(Le0e1, e_prime);
++
++    // Step 4. retrieve m' = c1 \xor L(e0 || e1)
++    for(uint32_t i = 0; i < ELL_SIZE; i++)
++    {
++        m_prime[i] = l_ct->val1[i] ^ Le0e1[i];
++    }
++
++    functionK(l_ss->raw, m_prime, l_ct->val0, l_ct->val1);
++
++    DMSG("  Exit crypto_kem_dec.\n");
++    return res;
++}
++
+diff -u -r Reference_Implementation/kem.h Reference_Implementation_patched/kem.h
+--- Reference_Implementation/kem.h	2024-10-10 16:22:14.000000000 +0900
++++ Reference_Implementation_patched/kem.h	2025-06-04 16:04:44.233553615 +0900
+@@ -89,6 +89,9 @@
+         IN const unsigned char *ct,
+         IN const unsigned char *sk);
+ 
++extern "C" int crypto_kem_dec_from_e(OUT unsigned char *ss,
++        IN const unsigned char *ct,
++        IN const unsigned char *e);
+ 
+ #endif //__KEM_H_INCLUDED__
+ 

@@ -1,0 +1,12 @@
+services:
+  secure-bike-revenge:
+    build:
+      context: .
+    ports:
+      - "12350:12350"
+    restart: unless-stopped
+    privileged: true
+    deploy:
+      resources:
+        reservations:
+          memory: 100M

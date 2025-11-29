@@ -1,0 +1,19 @@
+---
+name: Equivalent Privacy Wired
+canonicalName: equivalent-privacy-wired
+description: >
+  I heard that WEP is vulnerable, so I modified it a bit.
+flag: Alpaca{4_cryp7o_ch4lleng3_ab0u7_RC4_1s_rar3_i5n'7_1t?}
+flagFormat: Alpaca{...}
+categories:
+  - crypto
+authors:
+  - chocorusk
+remote:
+  connectionString: "`nc ${HOSTNAME} ${PORT}`"
+  composePath: compose.yaml
+  shouldIsolate: false
+  defaultTtl: 1200
+openAt: 2025-01-26 12:00:00+09:00
+isListed: true
+isArchived: false

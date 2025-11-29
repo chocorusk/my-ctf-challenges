@@ -1,0 +1,17 @@
+name: "Cubic Math"
+description: >
+  <p>It's a very very fun math time!</p>
+  <code style="background-color: rgb(229 231 235); border-radius: 4px; padding: .1em .3em .2em .3em; font-size: 0.85em; white-space: break-spaces;">nc {cubic-math.host} {cubic-math.port}</code>
+flag: "IERAE{3162ca208eebec4cd88df622c7c68f91c755b3de19ad5774bac6936acf620e25}"
+flagFormat: "IERAE{[\\x20-\\x7e]+}"
+authors:
+  - chocorusk
+tags:
+  - crypto
+  - hard
+canonical_name: cubic-math
+distfiles: ./distfiles
+score: 500
+order: 40
+remote:
+  compose: ./challenge/docker-compose.yml

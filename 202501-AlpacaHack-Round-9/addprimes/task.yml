@@ -1,0 +1,20 @@
+---
+name: addprimes
+canonicalName: addprimes
+description: >
+  addprimes in PARI/GP is useful for implementing RSA decryption.
+flag: Alpaca{k3ym0on's_favori7e_73chn1que!_x.com/kymn_/status/1527738058744791042}
+flagFormat: Alpaca{...}
+categories:
+  - crypto
+authors:
+  - chocorusk
+remote:
+  connectionString: "`nc ${HOSTNAME} ${PORT}`"
+  composePath: compose.yaml
+  shouldIsolate: false
+  defaultLimits: '{"cpus":"4","memory":"400M"}'
+  defaultTtl: 1200
+openAt: 2025-01-26 12:00:00+09:00
+isListed: true
+isArchived: false

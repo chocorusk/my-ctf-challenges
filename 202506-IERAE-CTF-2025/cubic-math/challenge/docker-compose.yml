@@ -1,0 +1,8 @@
+services:
+  cubic-math:
+    build:
+      context: .
+    ports:
+      - "12347:12347"
+    restart: unless-stopped
+    privileged: true

@@ -1,0 +1,101 @@
+diff -u -r Reference_Implementation/FromNIST/rng.c Reference_Implementation_patched/FromNIST/rng.c
+--- Reference_Implementation/FromNIST/rng.c	2024-10-10 16:22:14.000000000 +0900
++++ Reference_Implementation_patched/FromNIST/rng.c	2025-06-04 14:54:22.870084199 +0900
+@@ -135,7 +135,7 @@
+     EVP_CIPHER_CTX_free(ctx);
+ }
+ 
+-void
++extern "C" void
+ randombytes_init(unsigned char *entropy_input,
+                  unsigned char *personalization_string,
+                  int security_strength)
+diff -u -r Reference_Implementation/FromNIST/rng.h Reference_Implementation_patched/FromNIST/rng.h
+--- Reference_Implementation/FromNIST/rng.h	2024-10-10 16:22:14.000000000 +0900
++++ Reference_Implementation_patched/FromNIST/rng.h	2025-06-04 14:54:28.469718862 +0900
+@@ -44,7 +44,7 @@
+ int
+ seedexpander(AES_XOF_struct *ctx, unsigned char *x, unsigned long xlen);
+ 
+-void
++extern "C" void
+ randombytes_init(unsigned char *entropy_input,
+                  unsigned char *personalization_string,
+                  int security_strength);
+diff -u -r Reference_Implementation/kem.c Reference_Implementation_patched/kem.c
+--- Reference_Implementation/kem.c	2024-10-10 16:22:14.000000000 +0900
++++ Reference_Implementation_patched/kem.c	2025-06-04 14:54:10.243935982 +0900
+@@ -146,7 +146,7 @@
+ //The three APIs below (keypair, enc, dec) are defined by NIST:
+ //In addition there are two KAT versions of this API as defined.
+ ////////////////////////////////////////////////////////////////
+-int crypto_kem_keypair(OUT unsigned char *pk, OUT unsigned char *sk)
++extern "C" int crypto_kem_keypair(OUT unsigned char *pk, OUT unsigned char *sk)
+ {
+     //Convert to these implementation types
+     sk_t* l_sk = (sk_t*)sk;
+@@ -203,8 +203,9 @@
+ //Encapsulate - pk is the public key,
+ //              ct is a key encapsulation message (ciphertext),
+ //              ss is the shared secret.
+-int crypto_kem_enc(OUT unsigned char *ct,
++extern "C" int crypto_kem_enc(OUT unsigned char *ct,
+         OUT unsigned char *ss,
++        OUT unsigned char *e0_leak,
+         IN  const unsigned char *pk)
+ {
+     DMSG("  Enter crypto_kem_enc.\n");
+@@ -244,6 +245,8 @@
+     functionH(e, m, mu);
+     ntl_split_polynomial(e0, e1, e);
+ 
++    memcpy(e0_leak, e0, R_SIZE);
++
+     // ct = (c0, c1) = (e0 + e1*h, L(e0, e1) \XOR m)
+     ntl_mod_mul(l_ct->val0, e1, l_pk->val);
+     ntl_add(l_ct->val0, l_ct->val0, e0);
+@@ -266,7 +269,7 @@
+ //Decapsulate - ct is a key encapsulation message (ciphertext),
+ //              sk is the private key,
+ //              ss is the shared secret
+-int crypto_kem_dec(OUT unsigned char *ss,
++extern "C" int crypto_kem_dec(OUT unsigned char *ss,
+         IN const unsigned char *ct,
+         IN const unsigned char *sk)
+ {
+@@ -314,7 +317,7 @@
+ 
+     // Step 2. decoding:
+     DMSG("  Decoding.\n");
+-    rc = BF_decoder(e_tmp1, syndrome.raw, h0_compact, h1_compact);
++    res = (status_t)BF_decoder(e_tmp1, syndrome.raw, h0_compact, h1_compact); CHECK_STATUS(res);
+ 
+     convertBinaryToByte(e_prime, e_tmp1, 2*R_BITS);
+ 
+diff -u -r Reference_Implementation/kem.h Reference_Implementation_patched/kem.h
+--- Reference_Implementation/kem.h	2024-10-10 16:22:14.000000000 +0900
++++ Reference_Implementation_patched/kem.h	2025-06-04 14:54:17.228066041 +0900
+@@ -73,19 +73,20 @@
+ ////////////////////////////////////////////////////////////////
+ //Keygenerate - pk is the public key,
+ //              sk is the private key,
+-int crypto_kem_keypair(OUT unsigned char *pk, OUT unsigned char *sk);
++extern "C" int crypto_kem_keypair(OUT unsigned char *pk, OUT unsigned char *sk);
+ 
+ //Encapsulate - pk is the public key,
+ //              ct is a key encapsulation message (ciphertext),
+ //              ss is the shared secret.
+-int crypto_kem_enc(OUT unsigned char *ct,
++extern "C" int crypto_kem_enc(OUT unsigned char *ct,
+         OUT unsigned char *ss,
++        OUT unsigned char *e0_leak,
+         IN const unsigned char *pk);
+ 
+ //Decapsulate - ct is a key encapsulation message (ciphertext),
+ //              sk is the private key,
+ //              ss is the shared secret
+-int crypto_kem_dec(OUT unsigned char *ss,
++extern "C" int crypto_kem_dec(OUT unsigned char *ss,
+         IN const unsigned char *ct,
+         IN const unsigned char *sk);
+ 

@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  pairs:
+    build: .
+    ports:
+      - 4444:4444
+    restart: always

@@ -1,0 +1,14 @@
+---
+name: RSAMPC
+canonicalName: rsampc
+description: >
+  I calculated the RSA public key using multi-party computation.
+flag: Alpaca{4t7en710n_7o_sm4ll_param37er5!}
+flagFormat: Alpaca{...}
+categories:
+  - crypto
+authors:
+  - chocorusk
+openAt: 2025-01-26 12:00:00+09:00
+isListed: true
+isArchived: false

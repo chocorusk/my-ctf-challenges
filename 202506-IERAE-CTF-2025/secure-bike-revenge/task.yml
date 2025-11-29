@@ -1,0 +1,18 @@
+name: "Secure Bike Revenge"
+description: >
+  <p>Leaky but secure bike!</p>
+  <p>Note: The password for the attachment 7-zip file is the flag for Secure Bike.</p>
+  <code style="background-color: rgb(229 231 235); border-radius: 4px; padding: .1em .3em .2em .3em; font-size: 0.85em; white-space: break-spaces;">nc {secure-bike-revenge.host} {secure-bike-revenge.port}</code>
+flag: "IERAE{39bed6a3a2aa8a5932c04a135c490e668e3fd9765611f6b0dbae0f8a36e74305}"
+flagFormat: "IERAE{[\\x20-\\x7e]+}"
+authors:
+  - chocorusk
+tags:
+  - crypto
+  - hard
+canonical_name: secure-bike-revenge
+distfiles: ./distfiles
+score: 500
+order: 40
+remote:
+  compose: ./challenge/docker-compose.yml

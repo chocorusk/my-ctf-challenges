@@ -1,0 +1,15 @@
+---
+name: Broadcasting NTRU
+canonicalName: broadcasting-ntru
+description: >
+  There was a [known attack](https://eprint.iacr.org/2011/590) on my cryptosystem. I think it is secure now by some modifications...
+flag: Alpaca{N7RU_ha5_m4ny_in73re571n6_vuln3r4bil1t13s^^}
+flagFormat: Alpaca{...}
+categories:
+  - crypto
+tags: []
+authors:
+  - chocorusk
+openAt: 2024-10-12 12:00:00+09:00
+isListed: true
+isArchived: false

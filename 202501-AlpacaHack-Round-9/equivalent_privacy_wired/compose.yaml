@@ -1,0 +1,8 @@
+services:
+  equivalent-privacy-wired:
+    build: ./
+    environment:
+      - FLAG=Alpaca{4_cryp7o_ch4lleng3_ab0u7_RC4_1s_rar3_i5n'7_1t?}
+    ports:
+      - ${PORT:-9999}:9999
+    restart: unless-stopped

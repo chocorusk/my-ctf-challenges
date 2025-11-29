@@ -1,0 +1,8 @@
+services:
+  addprimes:
+    build: ./distfiles
+    environment:
+      - FLAG=Alpaca{k3ym0on's_favori7e_73chn1que!_x.com/kymn_/status/1527738058744791042}
+    ports:
+      - ${PORT:-9999}:9999
+    restart: unless-stopped

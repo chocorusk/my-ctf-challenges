@@ -1,0 +1,17 @@
+name: "Secure Bike"
+description: >
+  <p>Leaky but secure bike!</p>
+  <code style="background-color: rgb(229 231 235); border-radius: 4px; padding: .1em .3em .2em .3em; font-size: 0.85em; white-space: break-spaces;">nc {secure-bike.host} {secure-bike.port}</code>
+flag: "IERAE{ff1fc8667f8e9d3f20a21ca07f61ca0abbee3b7e836c63995f6a70f5985f7c93}"
+flagFormat: "IERAE{[\\x20-\\x7e]+}"
+authors:
+  - chocorusk
+tags:
+  - crypto
+  - hard
+canonical_name: secure-bike
+distfiles: ./distfiles
+score: 500
+order: 40
+remote:
+  compose: ./challenge/docker-compose.yml
