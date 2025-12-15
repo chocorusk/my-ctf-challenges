@@ -3,11 +3,20 @@
 This is the list of CTF challenges I created.
 
 ## Table of contents
+- [Daily AlpacaHack](#daily-alpacahack)
 - [International Cybersecurity Challenge TOKYO 2025 (ICC 2025)](#international-cybersecurity-challenge-tokyo-2025-icc-2025)
 - [IERAE CTF 2025](#ierae-ctf-2025)
 - [AlpacaHack Round 9 (Crypto)](#alpacahack-round-9-crypto)
 - [AlpacaHack Round 5 (Crypto)](#alpacahack-round-5-crypto)
 - [SatokiCTF 2024](#satokictf-2024)
+
+## Daily AlpacaHack
+
+Links: [Website](https://alpacahack.com/daily)
+
+| Challenge | Category | Difficulty | Solution | Keywords |
+| --- | --- | --- | --- | --- |
+| [Sugoi Flag Checker](./Daily-AlpacaHack/sugoi-flag-checker/) | rev | ★ | [Japanese](./Daily-AlpacaHack/sugoi-flag-checker/solution/) | ELF, dynamic analysis |
 
 ## International Cybersecurity Challenge TOKYO 2025 (ICC 2025)
 
