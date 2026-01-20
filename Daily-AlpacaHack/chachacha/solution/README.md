@@ -29,3 +29,7 @@ msg = b"Daily AlpacaHack is a daily CTF challenge with a fun new puzzle every da
 keystream = xor(encrypted_msg, msg)
 print(xor(encrypted_flag, keystream))
 ```
+
+Flag: `Alpaca{le7's_63t_reven6e_4t_th3_n3xt_SECCON!}`
+
+ちなみに、問題文の "Nostalgic" はSECCON 14 Qualsで出題された問題です。ChaCha20と、Poly1305というメッセージ認証コード (MAC) を組み合わせた認証付き暗号が題材の問題で、12チームしか解けなかった難問です。ぜひcryptoを勉強して、自信がついてきたらチャレンジしてみてください。
