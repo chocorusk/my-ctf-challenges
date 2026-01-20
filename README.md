@@ -3,12 +3,22 @@
 This is the list of CTF challenges I created.
 
 ## Table of contents
+- [SECCON CTF 14 Quals](#seccon-ctf-14-quals)
 - [Daily AlpacaHack](#daily-alpacahack)
 - [International Cybersecurity Challenge TOKYO 2025 (ICC 2025)](#international-cybersecurity-challenge-tokyo-2025-icc-2025)
 - [IERAE CTF 2025](#ierae-ctf-2025)
 - [AlpacaHack Round 9 (Crypto)](#alpacahack-round-9-crypto)
 - [AlpacaHack Round 5 (Crypto)](#alpacahack-round-5-crypto)
 - [SatokiCTF 2024](#satokictf-2024)
+
+## SECCON CTF 14 Quals
+
+Links: [CTFtime](https://ctftime.org/event/2862/)
+
+| Challenge | Category | Difficulty | Solution | Keywords |
+| --- | --- | --- | --- | --- |
+| [yukari](./202512-SECCON-CTF-14-Quals/yukari/) | crypto | ★★ | TODO | RSA |
+| [yukari infinity](./202512-SECCON-CTF-14-Quals/yukari-infinity/) | crypto | ★★★★ | TODO | RSA, math, algebraic number theory |
 
 ## Daily AlpacaHack
 
