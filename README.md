@@ -17,6 +17,7 @@ Links: [Website](https://alpacahack.com/daily)
 | Challenge | Category | Difficulty | Solution | Keywords |
 | --- | --- | --- | --- | --- |
 | [Sugoi Flag Checker](./Daily-AlpacaHack/sugoi-flag-checker/) | rev | ★ | [Japanese](./Daily-AlpacaHack/sugoi-flag-checker/solution/) | ELF, dynamic analysis |
+| [ChaChaCha](./Daily-AlpacaHack/chachacha/) | crypto | ★ | [Japanese](./Daily-AlpacaHack/chachacha/solution/) | stream cipher |
 
 ## International Cybersecurity Challenge TOKYO 2025 (ICC 2025)
 

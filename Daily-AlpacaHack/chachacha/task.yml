@@ -1,0 +1,18 @@
+---
+name: ChaChaCha
+canonicalName: chachacha
+description: |
+  Nostalgic was hard!? It's only ChaCha20!
+descriptionJa: |
+  Nostalgic was hard!? It's only ChaCha20!
+flag: Alpaca{le7's_63t_reven6e_4t_th3_n3xt_SECCON!}
+flagFormat: Alpaca{...}
+categories:
+  - crypto
+tags: []
+authors:
+  - chocorusk
+openAt: 2026-01-19 00:00:00+09:00
+archiveAt: 2026-01-20 00:00:00+09:00
+isListed: true
+isArchived: false
