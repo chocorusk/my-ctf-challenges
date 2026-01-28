@@ -1,0 +1,36 @@
+---
+name: ToyPQC
+canonicalName: toypqc
+description: |
+  Do you know post-quantum cryptography?
+
+  <details>
+  <summary>Beginner Hint: SageMath</summary>
+
+  - この問題では SageMath のスクリプトが使用されています。
+  - SageMath については [簡単な紹介文](https://github.com/alpacahack/resources/blob/main/resources/SageMath.md) を作成しました。必要に応じて参照してください。
+
+  </details>
+
+descriptionJa: |
+  耐量子計算機暗号って知ってますか？
+
+  <details>
+  <summary>初心者向けヒント: SageMath について</summary>
+
+  - この問題では SageMath のスクリプトが使用されています。
+  - SageMath については [簡単な紹介文](https://github.com/alpacahack/resources/blob/main/resources/SageMath.md) を作成しました。必要に応じて参照してください。
+
+  </details>
+
+flag: Alpaca{sa6em4th_i5_u5efu1^_^}
+flagFormat: Alpaca{...}
+categories:
+  - crypto
+tags: []
+authors:
+  - chocorusk
+openAt: 2026-01-27 00:00:00+09:00
+archiveAt: 2026-01-28 00:00:00+09:00
+isListed: true
+isArchived: false
