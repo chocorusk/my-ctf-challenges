@@ -29,6 +29,7 @@ Links: [Website](https://alpacahack.com/daily)
 | [Sugoi Flag Checker](./Daily-AlpacaHack/sugoi-flag-checker/) | rev | ★ | [Japanese](./Daily-AlpacaHack/sugoi-flag-checker/solution/) | ELF, dynamic analysis |
 | [ChaChaCha](./Daily-AlpacaHack/chachacha/) | crypto | ★ | [Japanese](./Daily-AlpacaHack/chachacha/solution/) | stream cipher |
 | [ToyPQC](./Daily-AlpacaHack/toypqc/) | crypto | ★ | TODO | matrix, sagemath, LWE |
+| [HellCouple](./Daily-AlpacaHack/hellcouple/) | crypto | ★ |  | DLP |
 
 ## International Cybersecurity Challenge TOKYO 2025 (ICC 2025)
 
