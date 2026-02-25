@@ -1,0 +1,27 @@
+name: Stealerusk
+canonicalName: stealerusk
+description: |
+  I might've been caught browsing some shady websites...><
+
+  Note:
+  - The binary for this challenge is implemented based on a real malware. It is harmless, but you should not run it outside sandbox.
+  - You can solve this challenge even without a Windows environment.
+
+descriptionJa: |
+  怪しいサイトを見ていたのがバレちゃったかも><
+
+  注:
+  - 本問題のバイナリは実際のマルウェアを元に実装されたものです。実行しても害はありませんが、隔離された環境以外では実行しないことを推奨します。
+  - 本問題は Windows の環境がなくても解くことが可能です。
+
+flag: Alpaca{compromising_webcam_screenshot}
+flagFormat: Alpaca{...}
+categories:
+  - rev
+tags: []
+authors:
+  - chocorusk
+openAt: 2026-02-21 00:00:00+09:00
+archiveAt: 2026-02-25 00:00:00+09:00
+isListed: true
+isArchived: false
