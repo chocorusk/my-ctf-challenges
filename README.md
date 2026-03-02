@@ -3,6 +3,7 @@
 This is the list of CTF challenges I created.
 
 ## Table of contents
+- [SECCON CTF 14 Finals](#seccon-ctf-14-finals)
 - [SECCON CTF 14 Quals](#seccon-ctf-14-quals)
 - [Daily AlpacaHack](#daily-alpacahack)
 - [International Cybersecurity Challenge TOKYO 2025 (ICC 2025)](#international-cybersecurity-challenge-tokyo-2025-icc-2025)
@@ -10,6 +11,23 @@ This is the list of CTF challenges I created.
 - [AlpacaHack Round 9 (Crypto)](#alpacahack-round-9-crypto)
 - [AlpacaHack Round 5 (Crypto)](#alpacahack-round-5-crypto)
 - [SatokiCTF 2024](#satokictf-2024)
+
+## SECCON CTF 14 Finals
+
+Links: [CTFtime (International)](https://ctftime.org/event/3106/) / [CTFtime (Domestic)](https://ctftime.org/event/3107/)
+
+### Jeopardy
+
+| Challenge | Category | Difficulty | Solution | Keywords | Co-Author |
+| --- | --- | --- | --- | --- | --- |
+| [dualrand](./202602-SECCON-CTF-14-Finals/dualrand/) | crypto | ★★★ | TODO | mersenne twister | ptr-yudai |
+| [pairs again](./202602-SECCON-CTF-14-Finals/pairs-again/) | crypto | ★★★★ | TODO | elliptic curve, pairing | |
+
+### King of the Hill
+
+| Challenge | Category | Solution | Keywords |
+| --- | --- | --- | --- |
+| [Oracle party/chal2](./202602-SECCON-CTF-14-Finals/oracle-party-chal2/) | crypto | TODO | RSA, LSB oracle |
 
 ## SECCON CTF 14 Quals
 

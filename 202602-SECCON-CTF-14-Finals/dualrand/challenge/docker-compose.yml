@@ -1,0 +1,10 @@
+services:
+  dualrand:
+    build:
+      context: .
+    ulimits:
+      core: 0
+    ports:
+      - "10395:10395"
+    restart: unless-stopped
+    privileged: true
