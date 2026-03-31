@@ -49,6 +49,7 @@ Links: [Website](https://alpacahack.com/daily)
 | [ToyPQC](./Daily-AlpacaHack/toypqc/) | crypto | ★ | TODO | matrix, sagemath, LWE |
 | [HellCouple](./Daily-AlpacaHack/hellcouple/) | crypto | ★ |  | DLP |
 | [Stealerusk](./Daily-AlpacaHack/stealerusk/) | rev | ★ |  | Windows API |
+| [Alpacker](./Daily-AlpacaHack/alpacker/) | rev | ★ |  | packer, shellcode |
 
 ## International Cybersecurity Challenge TOKYO 2025 (ICC 2025)
 

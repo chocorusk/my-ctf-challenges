@@ -1,0 +1,17 @@
+name: Alpacker
+canonicalName: alpacker
+description: |
+  There is a hidden minialpaca🦙
+descriptionJa: |
+  ミニアルパカが隠れているよ🦙
+flag: Alpaca{kaw4ii_min1419aca_1n_4lp4ca!}
+flagFormat: Alpaca{...}
+categories:
+  - rev
+tags: []
+authors:
+  - chocorusk
+openAt: 2026-03-21 00:00:00+09:00
+archiveAt: 2026-03-22 00:00:00+09:00
+isListed: true
+isArchived: false
