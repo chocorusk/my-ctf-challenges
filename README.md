@@ -53,7 +53,7 @@ Links: [Website](https://alpacahack.com/daily)
 
 ## International Cybersecurity Challenge TOKYO 2025 (ICC 2025)
 
-Links: [Website](https://icctokyo2025.nisc.go.jp/)
+Links: [Website](https://www.cyber.go.jp/pr/ICCTokyo.html)
 
 ### Jeopardy
 
